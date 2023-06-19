@@ -1,1 +1,15 @@
-creer draft joueur nba
+creer draft joueur nba :
+ - [x] route "afficher all joueur"
+ - [x] route "paramètre équipe => joueur de cette équipe"
+ - [] route "joueur au hasard"
+
+ - [x] jeu de données en json
+ - [] deploy render.com
+ - [x] node & express
+
+ - [x] joueur {
+    nom
+    prenom
+    numero
+    equipe
+ }
