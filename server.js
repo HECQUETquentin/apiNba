@@ -5,7 +5,7 @@ const routes = require("./routes/routes");
 
 const cors = require('cors');
 
-appendFile.use(cors());
+app.use(cors());
 
 /*app.get("/", (req, res) => {
 res.status(200).json({"body":"Bienvenue son mon API"});
