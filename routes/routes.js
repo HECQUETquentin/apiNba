@@ -1,24 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const data = require('../db/data');
+const controller = require('../controllers/index')
 
 //retourne la liste de tous les joueurs
-router.get("/allPlayers", function (req, res){
-    res.json(data);
-})
+router.get("/findAllPlayers", controller.findAllPlayers)
 
 // cherche un joueur selon un param equipe
-router.get('/findTeam/:team', function(req, res){
-    const team = req.params.team;
+router.get('/findTeam/:team', controller.findTeam);
 
-    const result = data.filter(player => player.equipe == team)
-
-    //console.log(result);
-    if(result.length == 0){
-        res.json({message: "équipe introuvable"})
-    }else{
-        res.json(result);
-    }
-})
+//retourne un joueur au hasard
+router.get('/randomPlayer', controller.randomPlayer);
 
 module.exports = router;
